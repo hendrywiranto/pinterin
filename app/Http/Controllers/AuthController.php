@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Session;
 class AuthController extends Controller
 {
     function index(){
+        Session::forget('admin');
     	return view('auth.login');
     }
 

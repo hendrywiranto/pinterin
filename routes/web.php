@@ -20,3 +20,12 @@ Route::get('/logout','AuthController@logout')->name('logout');
 
 Route::get('/register','AuthController@register_index')->name('register');
 Route::post('/register','AuthController@register');
+
+
+Route::group(['middleware' => ['adminhome']], function () {
+	Route::get('/admin', 'AdminController@index')->name('homeAdmin');
+});
+
+Route::get('/admin/login','AdminController@login_index')->name('loginAdmin');
+Route::post('/admin/login','AdminController@login')->middleware('loginAdmin');
+Route::get('/admin/logout','AdminController@logout')->name('logoutAdmin');

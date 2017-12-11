@@ -5,6 +5,8 @@
 		<div class="container fill">
 			@if(session('username'))
 		    	@include('layouts.navbar')
+			@elseif(session('admin'))
+		    	@include('admin.navbar')
 			@endif
 		{{--    @include('layouts.header')--}}
 		    @yield('content')
