@@ -9,11 +9,15 @@ TO DO LIST
 USER
 - [DONE] user login and register
 - [DONE] user lihat list buku dari toko
-- user beli list buku dari toko
-- user tambah request
-- user jual request
-- user jual buku bekas
-- user beli buku bekas
+- [DONE] user beli list buku dari toko
+
+- [DONE] user lihat request yang ada
+- [DONE] user tambah request
+- [DONE] user jual request  - cuma klik langsung kejual, perlu ditambah apa?
+
+- [DONE] user lihat selling yang ada
+- [DONE] user tambah selling
+- [WIP 50%] user beli selling - cuma klik langsung kebeli, perlu ditambah apa?
 
 ADMIN
 - [DONE] admin login

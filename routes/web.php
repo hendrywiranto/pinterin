@@ -19,6 +19,11 @@ Route::group(['middleware' => ['grouphome']], function () {
 	Route::post('/request','RequestController@sell_buku');
 	Route::get('/request/add','RequestController@add_request');
 	Route::post('/request/add','RequestController@save_add_request');
+
+	Route::get('/sell', 'SellController@index')->name('listselling');
+	Route::post('/sell','SellController@buy_buku');
+	Route::get('/sell/add','SellController@add_selling');
+	Route::post('/sell/add','SellController@save_add_selling');
 });
 
 Route::get('/login','AuthController@index')->name('login');

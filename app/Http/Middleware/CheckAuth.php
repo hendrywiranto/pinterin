@@ -20,6 +20,7 @@ class CheckAuth
         $flagLogin = DB::select('call sp_login(?,?)', [$request->username, md5($request->password)]);
         if ($flagLogin[0]->flag) {
             Session::put('username', $request->username);
+            Session::put('user_id', $flagLogin[0]->id);
             Session::put('name', $flagLogin[0]->message);
         } else {
             Session::flash('error_message',$flagLogin[0]->message);

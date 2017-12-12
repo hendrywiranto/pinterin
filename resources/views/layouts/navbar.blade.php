@@ -13,7 +13,7 @@
                 <a class="nav-link" href="{{'/request'}}">Request</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sell</a>
+                <a class="nav-link" href="{{'/sell'}}">Sell</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{'logout'}}">Logout</a>

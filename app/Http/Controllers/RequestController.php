@@ -18,7 +18,7 @@ class RequestController extends Controller
         DB::table('request')
             ->where('request_id', $request->book_id)
             ->update(['request_sold' => 1]);
-        return redirect()->route('listbuku');
+        return redirect()->route('listrequest');
     }
 
     function add_request()
@@ -35,9 +35,11 @@ class RequestController extends Controller
         $book_year =        $request->input('book_year');
         $book_publisher =   $request->input('book_publisher');
         $book_price =       $request->input('book_price');
+        $user_id =          session('user_id');
         DB::table('request')
             ->insert(
                 array(
+                    'user_id' => $user_id,
                     'request_date' => $book_date,
                     'request_sold' => $book_sold,
                     'request_book_name' => $book_name,
