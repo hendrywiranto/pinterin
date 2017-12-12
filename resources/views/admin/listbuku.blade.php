@@ -1,6 +1,8 @@
 @extends('layouts.index')
 @section('content')
+	<?php $i=0; ?>
 	@foreach($books as $book)
+		<br> <?php $i++; ?> {{$i}}
 		<div class="row">
 			<div class="col-md-2">
 				<label>Nama Buku</label>

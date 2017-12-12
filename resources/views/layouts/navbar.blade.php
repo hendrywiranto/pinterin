@@ -10,7 +10,7 @@
                 <a class="nav-link" href="{{'listbuku'}}">Buy</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Request</a>
+                <a class="nav-link" href="{{'/request'}}">Request</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Sell</a>

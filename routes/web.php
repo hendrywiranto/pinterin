@@ -12,8 +12,13 @@
 */
 Route::group(['middleware' => ['grouphome']], function () {
 	Route::get('/', 'HomeController@index')->name('home');
-	Route::get('/listbuku', 'HomeController@list_buku')->name('listbuku');
-	Route::post('/listbuku','HomeController@buy_buku');
+	Route::get('/listbuku', 'BuyController@index')->name('listbuku');
+	Route::post('/listbuku','BuyController@buy_buku');
+
+	Route::get('/request', 'RequestController@index')->name('listrequest');
+	Route::post('/request','RequestController@sell_buku');
+	Route::get('/request/add','RequestController@add_request');
+	Route::post('/request/add','RequestController@save_add_request');
 });
 
 Route::get('/login','AuthController@index')->name('login');
