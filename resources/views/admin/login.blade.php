@@ -1,6 +1,6 @@
 @extends('layouts.index')
 @section('content')
-	<form class="comment-form" role="form" method="POST" action='login'>
+	<form role="form" method="POST" action='login'>
        	{!! csrf_field() !!}
   		<div class="form-group">
     		<label for="">Username Admin</label>
@@ -11,5 +11,4 @@
 			<input type="submit" name="submit">
 		</div>
 	</form>
-	<a href="{{'register'}}">Register</a>
 @stop

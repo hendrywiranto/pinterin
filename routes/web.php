@@ -12,6 +12,7 @@
 */
 Route::group(['middleware' => ['grouphome']], function () {
 	Route::get('/', 'HomeController@index')->name('home');
+	Route::get('/listbuku', 'HomeController@list_buku')->name('listbuku');
 });
 
 Route::get('/login','AuthController@index')->name('login');
@@ -21,9 +22,11 @@ Route::get('/logout','AuthController@logout')->name('logout');
 Route::get('/register','AuthController@register_index')->name('register');
 Route::post('/register','AuthController@register');
 
-
 Route::group(['middleware' => ['adminhome']], function () {
 	Route::get('/admin', 'AdminController@index')->name('homeAdmin');
+	Route::get('/admin/add','AdminController@add_buku_index')->name('addbuku');
+	Route::post('/admin/add','AdminController@add_buku');
+	Route::get('/admin/listbuku','AdminController@list_buku')->name('listbukuAdmin');
 });
 
 Route::get('/admin/login','AdminController@login_index')->name('loginAdmin');

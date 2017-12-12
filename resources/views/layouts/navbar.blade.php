@@ -4,7 +4,10 @@
         <nav class="text-right">
             <ul class="nav justify-content-end">
               <li class="nav-item">
-                <a class="nav-link" href="{{'home'}}">Home</a>
+                <a class="nav-link" href="{{'/'}}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{'listbuku'}}">Buy</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Request</a>

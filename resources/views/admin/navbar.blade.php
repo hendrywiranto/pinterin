@@ -4,13 +4,16 @@
         <nav class="text-right">
             <ul class="nav justify-content-end">
               <li class="nav-item">
-                <a class="nav-link" href="{{'homeAdmin'}}">Home</a>
+                <a class="nav-link" href="{{'/admin'}}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Tambah buku</a>
+                <a class="nav-link" href="{{'/admin/add'}}">Tambah buku</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{'logoutAdmin'}}">Logout</a>
+                <a class="nav-link" href="{{'/admin/listbuku'}}">List buku</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{'/admin/logout'}}">Logout</a>
               </li>
             </ul>
         </nav>
