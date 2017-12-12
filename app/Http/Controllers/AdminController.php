@@ -53,7 +53,7 @@ class AdminController extends Controller
                     'shop_sell_book_publisher' => $book_publisher,
                     'shop_sell_price' => $book_price,
                 ));
-        return redirect()->route('listbuku');
+        return redirect()->route('listbukuAdmin');
     }
 
     function list_buku()

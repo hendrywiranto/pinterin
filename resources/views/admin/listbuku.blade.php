@@ -49,5 +49,17 @@
 				{{$book->shop_sell_price}}
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<label>Status</label>
+			</div>
+			<div class="col-md-2">
+				@if($book->shop_sell_sold==1)
+					Sold
+				@else
+					Available
+				@endif
+			</div>
+		</div><br>
 	@endforeach
 @stop

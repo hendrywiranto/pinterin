@@ -11,13 +11,13 @@
 			<input class="form-control" type="text" name="book_author">
 
     		<label for="">Tahun Buku</label>
-			<input class="form-control" type="text" name="book_year">
+			<input class="form-control" type="number" min="1900" max="2018" step="1" name="book_year">
 
     		<label for="">Penerbit Buku</label>
 			<input class="form-control" type="text" name="book_publisher">
 
     		<label for="">Harga Buku</label>
-			<input class="form-control" type="text" name="book_price">
+			<input class="form-control" type="number" min="0" max="1000000" step="100" name="book_price">
 
 			<input class="btn btn-primary" type="submit" name="submit">
 		</div>

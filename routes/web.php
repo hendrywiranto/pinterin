@@ -13,6 +13,7 @@
 Route::group(['middleware' => ['grouphome']], function () {
 	Route::get('/', 'HomeController@index')->name('home');
 	Route::get('/listbuku', 'HomeController@list_buku')->name('listbuku');
+	Route::post('/listbuku','HomeController@buy_buku');
 });
 
 Route::get('/login','AuthController@index')->name('login');

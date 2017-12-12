@@ -49,5 +49,10 @@
 				{{$book->shop_sell_price}}
 			</div>
 		</div>
+		<form role="form" method="POST" action='listbuku'>
+	       	{!! csrf_field() !!}
+	       	<input type="hidden" name="book_id" value="{{$book->shop_sell_id}}">
+	       	<input type="submit" name="submit">
+		</form>
 	@endforeach
 @stop
