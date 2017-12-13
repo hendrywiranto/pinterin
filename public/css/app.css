@@ -1,8 +1,19 @@
 .container {
-	background-color: #E0E0E0;
-}
-
-.fill {
+	background-color: #E3F2FD;
+	opacity: 0.9;
 	min-height: 100%;
     height: 100%;
+}
+
+html, body {
+    background: url(../images/book-background.jpg) center no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-right {
+	float: right;
+	width: 70%;
+	display: inline-block;
 }

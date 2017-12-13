@@ -2,17 +2,15 @@
 <html lang="en">
 	@include('layouts.head')
 	<body>
+		@if(session('username'))
+		    @include('layouts.navbar')
+		@elseif(session('admin'))
+		    @include('admin.navbar')
+		@endif
 		<div class="container fill">
-			@if(session('username'))
-		    	@include('layouts.navbar')
-			@elseif(session('admin'))
-		    	@include('admin.navbar')
-			@endif
 		{{--    @include('layouts.header')--}}
 		    @yield('content')
-		<div class="container">
             <p>Copyright &copy;2017 by DUCK-HW</p>
-        </div>
 		</div>
 	</body>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

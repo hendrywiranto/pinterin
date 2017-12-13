@@ -26,4 +26,4 @@ ADMIN
 
 FRONT END BELUM SEMUA
 
-Copyright (C) 2017 [@hendrywiranto, @pasaribuivan, @almuab]
+Copyright (C) 2017 [@hendrywiranto, @pasaribuivan, @almuab, @joshuapardosi]
