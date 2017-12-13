@@ -2,7 +2,7 @@
 @section('content')
 	<?php $i=0; ?>
 	@foreach($books as $book)
-		<br> <?php $i++; ?> {{$i}}
+		<br> <h2> <?php $i++; ?> {{$i}} </h2>
 		<div class="row">
 			<div class="col-md-2">
 				<label>Nama Buku</label>
@@ -48,7 +48,7 @@
 				<label>Harga Buku</label>
 			</div>
 			<div class="col-md-2">
-				{{$book->shop_sell_price}}
+				Rp {{$book->shop_sell_price}}
 			</div>
 		</div>
 		<div class="row">

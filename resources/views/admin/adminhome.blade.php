@@ -1,4 +1,4 @@
 @extends('layouts.index')
 @section('content')
-	<div>Ini Admin</div>
+	<div><h1>Halaman Admin</h1></div>
 @stop

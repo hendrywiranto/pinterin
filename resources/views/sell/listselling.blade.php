@@ -1,11 +1,20 @@
 @extends('layouts.index')
 @section('content')
+	<div class="container"><br>
 	<div class="row">
+		<div class="col">
+			<h1>Sell</h1>
+		</div>
+		<div class="col-3">
+			<a class="btn btn-outline-success my-2 my-sm-0" href="{{'/sell/add'}}">Add sell</a>
+		</div>
+	</div>
+<!-- 	<div class="row">
 		<a href="{{'/sell/add'}}">Add sell</a>
 	</div>
-	<?php $i=0; ?>
+ -->	<?php $i=0; ?>
 	@foreach($sellings as $selling)
-		<br> <?php $i++; ?> {{$i}}
+		<br><h2> <?php $i++; ?> {{$i}} </h2>
 		<div class="row">
 			<div class="col-md-2">
 				<label>Nama Buku</label>
@@ -51,13 +60,13 @@
 				<label>Harga Buku</label>
 			</div>
 			<div class="col-md-2">
-				{{$selling->selling_price}}
+				Rp {{$selling->selling_price}}
 			</div>
 		</div>
 		<form role="form" method="POST" action='sell'>
 	       	{!! csrf_field() !!}
 	       	<input type="hidden" name="book_id" value="{{$selling->selling_id}}">
-	       	<input type="submit" name="Buy">
+	       	<input class="btn btn-warning" type="submit" name="Buy">
 		</form>
 	@endforeach
 @stop
