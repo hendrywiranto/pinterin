@@ -6,7 +6,7 @@
 			<h1>Request Book</h1>
 		</div>
 		<div class="col-3">
-			<a class="btn btn-outline-success my-2 my-sm-0" href="{{'/request/add'}}">Add Request</a>
+			<a class="btn btn-success my-2 my-sm-0" href="{{'/request/add'}}">Add Request</a>
 		</div>
 	</div>
 	<?php $i=0; ?>
@@ -64,7 +64,7 @@
 		<form role="form" method="POST" action='request'>
 	       	{!! csrf_field() !!}
 	       	<input type="hidden" name="book_id" value="{{$request->request_id}}">
-	       	<input class="btn btn-outline-info" type="submit" name="submit">
+	       	<input class="btn btn-outline-success" type="submit" name="submit" value="Request">
 		</form>
 	</div>
 	@endforeach

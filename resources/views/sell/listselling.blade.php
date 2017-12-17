@@ -6,7 +6,7 @@
 			<h1>Sell Book</h1>
 		</div>
 		<div class="col-3">
-			<a class="btn btn-outline-danger my-2 my-sm-0" href="{{'/sell/add'}}">Add Sell</a>
+			<a class="btn btn-danger my-2 my-sm-0" href="{{'/sell/add'}}">Add Sell</a>
 		</div>
 	</div>
 <!-- 	<div class="row">
@@ -68,7 +68,7 @@
 		<form role="form" method="POST" action='sell'>
 	       	{!! csrf_field() !!}
 	       	<input type="hidden" name="book_id" value="{{$selling->selling_id}}">
-	       	<input class="btn btn-outline-warning" type="submit" name="Buy">
+	       	<input class="btn btn-outline-danger" type="submit" name="submit" value="Sell">
 		</form>
 	</div>
 	@endforeach
