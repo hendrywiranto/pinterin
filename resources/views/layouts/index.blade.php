@@ -2,16 +2,20 @@
 <html lang="en">
 	@include('layouts.head')
 	<body>
-		@if(session('username'))
-		    @include('layouts.navbar')
-		@elseif(session('admin'))
-		    @include('admin.navbar')
-		@endif
-		<div class="container">
+		<div class="container fill">
+			<div class="card-header">
+				@if(session('username'))
+				    @include('layouts.navbar')
+				@elseif(session('admin'))
+				    @include('admin.navbar')
+				@endif
+			</div>
+		<div class="card-footer text-muted">
 		{{--    @include('layouts.header')--}}
 		    @yield('content')
-            <p>Copyright &copy;2017 by DUCK-HW</p>
+            <p align="center">Copyright &copy;2017 Wiranto Inc.</p>
 		</div>
+	</div>
 	</body>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

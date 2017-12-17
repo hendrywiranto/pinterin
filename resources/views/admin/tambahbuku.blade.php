@@ -25,10 +25,12 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-6">
 	    		<label for="">Harga Buku</label>
-				<input class="form-control" type="number" min="0" max="1000000" step="100" name="book_price">
-			</div>
+	    		<div class="input-group">
+		    		<div class="input-group-addon">Rp</div>
+					<input class="form-control currency" type="number" min="0" max="1000000" step="100" name="book_price">
+				</div></div>
 		</div><br>
 			<input class="btn btn-primary" type="submit" name="submit">
 		</div>

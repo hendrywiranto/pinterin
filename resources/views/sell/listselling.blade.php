@@ -1,69 +1,76 @@
 @extends('layouts.index')
 @section('content')
-{{-- 	<div class="container"><br> --}}
+	<div class="container"><br>
 	<div class="row">
 		<div class="col">
-			<h1>Sell</h1>
+			<h1>Sell Book</h1>
 		</div>
 		<div class="col-3">
-			<a class="btn btn-outline-success my-2 my-sm-0" href="{{'/sell/add'}}">Add sell</a>
+			<a class="btn btn-outline-danger my-2 my-sm-0" href="{{'/sell/add'}}">Add Sell</a>
 		</div>
 	</div>
-	<?php $i=0; ?>
+<!-- 	<div class="row">
+		<a href="{{'/sell/add'}}">Add sell</a>
+	</div>
+ -->	
+ 	<?php $i=0; ?>
 	@foreach($sellings as $selling)
-		<br><h2> <?php $i++; ?> {{$i}} </h2>
+	<br><h2> <?php $i++; ?> {{$i}} </h2>
+	<div class="container fill">
 		<div class="row">
-			<div class="col-md-2">
+			<div class="col-md-4">
 				<label>Nama Buku</label>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-6">
 				{{$selling->selling_book_name}}
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-2">
+			<div class="col-md-4">
 				<label>Penulis Buku</label>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-6">
 				{{$selling->selling_book_author}}
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-2">
+			<div class="col-md-4">
 				<label>Tahun Buku</label>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-6">
 				{{$selling->selling_book_year}}
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-2">
+			<div class="col-md-4">
 				<label>Penerbit Buku</label>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-6">
 				{{$selling->selling_book_publisher}}
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-2">
+			<div class="col-md-4">
 				<label>Tanggal list buku</label>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-6">
 				{{$selling->selling_date}}
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-2">
+			<div class="col-md-4">
 				<label>Harga Buku</label>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-6">
 				Rp {{$selling->selling_price}}
 			</div>
 		</div>
 		<form role="form" method="POST" action='sell'>
 	       	{!! csrf_field() !!}
 	       	<input type="hidden" name="book_id" value="{{$selling->selling_id}}">
-	       	<input class="btn btn-warning" type="submit" name="Buy" value="Buy">
+	       	<input class="btn btn-outline-warning" type="submit" name="Buy">
 		</form>
+	</div>
 	@endforeach
+	<br><div>
 @stop

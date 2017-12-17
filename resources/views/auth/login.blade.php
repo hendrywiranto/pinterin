@@ -5,15 +5,16 @@
        	<div class="row">
        		<div class="col"></div>
 	  		<div class="form-group col-6">
-	    		<label for="">username</label>
+	    		<label for="">Username</label>
 				<input class="form-control" type="text" name="username">
 				
-	    		<label for="">password</label>
+	    		<label for="">Password</label>
 				<input class="form-control" type="password" name="password"><br>	
-				<input class="btn btn-success" type="submit" name="submit">
+				<input class="btn btn-outline-success" type="submit" name="submit">
 			</div>
 			<div class="col"></div>
 		</div>
 	</form>
-	<a class="btn btn-success" href="{{'register'}}">Register</a>
+	<h5>No account? Create one!</h5>
+	<a class="btn btn-success btn-lg" href="{{'register'}}">Register</a>
 @stop
