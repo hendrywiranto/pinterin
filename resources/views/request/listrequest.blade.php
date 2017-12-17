@@ -63,7 +63,7 @@
 		<form role="form" method="POST" action='request'>
 	       	{!! csrf_field() !!}
 	       	<input type="hidden" name="book_id" value="{{$request->request_id}}">
-	       	<input class="btn btn-info" type="submit" name="Buy">
+	       	<input class="btn btn-info" type="submit" name="Sell" value="Sell">
 		</form>
 	@endforeach
 	<br></div>

@@ -7,7 +7,7 @@
 		@elseif(session('admin'))
 		    @include('admin.navbar')
 		@endif
-		<div class="container fill">
+		<div class="container">
 		{{--    @include('layouts.header')--}}
 		    @yield('content')
             <p>Copyright &copy;2017 by DUCK-HW</p>

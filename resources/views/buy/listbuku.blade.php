@@ -1,5 +1,10 @@
 @extends('layouts.index')
 @section('content')
+	<div class="row">
+		<div class="col">
+			<h1>Official Store</h1>
+		</div>
+	</div>
 	<?php $i=0; ?>
 	@foreach($books as $book)
 		<br> <?php $i++; ?> {{$i}}
@@ -54,7 +59,7 @@
 		<form role="form" method="POST" action='listbuku'>
 	       	{!! csrf_field() !!}
 	       	<input type="hidden" name="book_id" value="{{$book->shop_sell_id}}">
-	       	<input type="submit" name="Buy">
+	       	<input type="submit" name="Buy" value="Buy">
 		</form>
 	@endforeach
 @stop

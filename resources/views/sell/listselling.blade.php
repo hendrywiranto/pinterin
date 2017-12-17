@@ -9,10 +9,7 @@
 			<a class="btn btn-outline-success my-2 my-sm-0" href="{{'/sell/add'}}">Add sell</a>
 		</div>
 	</div>
-<!-- 	<div class="row">
-		<a href="{{'/sell/add'}}">Add sell</a>
-	</div>
- -->	<?php $i=0; ?>
+	<?php $i=0; ?>
 	@foreach($sellings as $selling)
 		<br><h2> <?php $i++; ?> {{$i}} </h2>
 		<div class="row">
@@ -66,7 +63,7 @@
 		<form role="form" method="POST" action='sell'>
 	       	{!! csrf_field() !!}
 	       	<input type="hidden" name="book_id" value="{{$selling->selling_id}}">
-	       	<input class="btn btn-warning" type="submit" name="Buy">
+	       	<input class="btn btn-warning" type="submit" name="Buy" value="Buy">
 		</form>
 	@endforeach
 @stop
