@@ -9,14 +9,18 @@
 			<a class="btn btn-danger my-2 my-sm-0" href="{{'/sell/add'}}">Add Sell</a>
 		</div>
 	</div>
-<!-- 	<div class="row">
-		<a href="{{'/sell/add'}}">Add sell</a>
-	</div>
- -->	
  	<?php $i=0; ?>
 	@foreach($sellings as $selling)
 	<br><h2> <?php $i++; ?> {{$i}} </h2>
 	<div class="container fill">
+		<div class="row">
+			<div class="col-md-4">
+				<label>Penjual Buku</label>
+			</div>
+			<div class="col-md-6">
+				{{$selling->user_name}}
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-md-4">
 				<label>Nama Buku</label>
@@ -65,10 +69,11 @@
 				Rp {{$selling->selling_price}}
 			</div>
 		</div>
-		<form role="form" method="POST" action='sell'>
+		<form role="form" method="GET" action='sell/detail'>
 	       	{!! csrf_field() !!}
-	       	<input type="hidden" name="book_id" value="{{$selling->selling_id}}">
-	       	<input class="btn btn-outline-danger" type="submit" name="submit" value="Sell">
+	       	<input type="hidden" name="selling_id" value="{{$selling->selling_id}}">
+	       	<input type="hidden" name="selling_price" value="{{$selling->selling_price}}">
+	       	<input class="btn btn-outline-danger" type="submit" name="submit" value="Buy">
 		</form>
 	</div>
 	@endforeach

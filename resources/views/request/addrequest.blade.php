@@ -25,6 +25,16 @@
 			    		<div class="input-group-addon">Rp</div>
 							<input class="form-control" type="number" min="0" max="1000000" step="100" name="book_price">
 					</div>
+
+		    		<label for="">Penerima Buku</label>
+					<input class="form-control" type="text" name="request_penerima">
+
+		    		<label for="">Alamat Penerima Buku</label>
+					<input class="form-control" type="text" name="request_alamat">
+
+		    		<label for="">Telepon Penerima Buku</label>
+					<input class="form-control" type="text" name="request_phone">
+
 					<br>
 					<input class="btn btn-success" type="submit" name="submit" value="Set Request">
 					<a class="btn btn-outline-success" href="/request">Back</a>

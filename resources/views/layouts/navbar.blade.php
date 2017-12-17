@@ -11,7 +11,7 @@
                     <a class="nav-link" href="{{'/'}}">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{'listbuku'}}">Buy</a>
+                    <a class="nav-link" href="{{'/listbuku'}}">Buy</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{'/request'}}">Request</a>
@@ -23,13 +23,10 @@
               </div>
               <div class="col-4">
                 <span class="navbar-text" style="padding-right: 10px;">
-                  <i> User: {{session('name')}} </i>
+                  <i>User: <a href="{{'/profile'}}">{{session('name')}}</a></i>
                 </span>
-                <a class="btn btn-outline-success" href="{{'logout'}}">Logout</a>
+                <a class="btn btn-outline-success" href="{{'/logout'}}">Logout</a>
               </div>
-              <!-- <li class="nav-item"> -->
-                <!-- <a class="nav-link" href="{{'logout'}}">Logout</a> -->
-              <!-- </li> -->
         </nav>
     <!-- end container -->
 </div>

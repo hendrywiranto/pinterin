@@ -9,16 +9,63 @@ class SellController extends Controller
 {
     function index()
     {
-        $sellings = DB::table('selling')->where('selling_sold', 0)->get();
+        $sellings = DB::table('selling')
+            ->join('user', 'user.user_id', '=', 'selling.user_id')
+            ->where('selling_sold', 0)
+            ->get();
+        //$sellings = DB::table('selling')->where('selling_sold', 0)->get();
         return view('sell.listselling',compact('sellings'));
+    }
+
+    function display_buy_form(Request $request)
+    {
+        $selling_id =       $request->input('selling_id');
+        $selling_price =    $request->input('selling_price');
+        return view('sell.detail', compact('selling_id','selling_price'));
     }
 
     function buy_buku(Request $request)
     {
-        DB::table('selling')
-            ->where('selling_id', $request->book_id)
-            ->update(['selling_sold' => 1]);
-        return redirect()->route('listselling');
+        $trans_pembeli_id = session('user_id');
+        $trans_sell_id =    $request->input('selling_id');
+        $trans_penerima =   $request->input('trans_penerima');
+        $trans_alamat =     $request->input('trans_alamat');
+        $trans_phone =      $request->input('trans_phone');
+        $trans_date =       date("Y-m-d");
+
+        $current_saldo =    DB::table('user')
+                                ->where('user_id', session('user_id'))
+                                ->get();
+        $price =            (int)$request->selling_price;
+        $saldo =            $current_saldo[0]->user_saldo - $price;
+
+        if ($saldo<0){
+            $notice = "Saldo tidak mencukupi";
+            return view('layouts.notice',compact('notice'));
+        }
+        else {
+            DB::table('user')
+                ->where('user_id', session('user_id'))
+                ->update(['user_saldo' => $saldo]);
+
+            DB::table('sell_transaction')
+                ->insert(
+                    array(
+                        'trans_pembeli_id' => $trans_pembeli_id,
+                        'trans_sell_id' => $trans_sell_id,
+                        'trans_penerima' => $trans_penerima,
+                        'trans_alamat' => $trans_alamat,
+                        'trans_date' => $trans_date,
+                        'trans_phone' => $trans_phone,
+                    ));
+
+            DB::table('selling')
+                ->where('selling_id', $request->selling_id)
+                ->update(['selling_sold' => 1]);
+
+            $notice = "Transaksi berhasil";
+            return view('layouts.notice',compact('notice'));
+        }
     }
 
     function add_selling()

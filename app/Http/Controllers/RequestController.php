@@ -9,8 +9,21 @@ class RequestController extends Controller
 {
     function index()
     {
-        $requests = DB::table('request')->where('request_sold', 0)->get();
+        //$requests = DB::table('request')->where('request_sold', 0)->get();
+        $requests = DB::table('request')
+            ->join('user', 'user.user_id', '=', 'request.user_id')
+            ->where('request_sold', 0)
+            ->get();
         return view('request.listrequest',compact('requests'));
+    }
+
+    function confirmation(Request $request){
+        $book_id =          $request->input('book_id');
+        $alamat =           $request->input('alamat');
+        $book_name =        $request->input('book_name');
+        $penerima =         $request->input('penerima');
+        $book_price =       $request->input('book_price');
+        return view('request.confirmation',compact('book_id','alamat','book_name','penerima','book_price'));
     }
 
     function sell_buku(Request $request)
@@ -28,6 +41,7 @@ class RequestController extends Controller
 
     function save_add_request(Request $request)
     {
+        $user_id =          session('user_id');
         $book_date =        date("Y-m-d");
         $book_sold =        0;
         $book_name =        $request->input('book_name');
@@ -35,7 +49,9 @@ class RequestController extends Controller
         $book_year =        $request->input('book_year');
         $book_publisher =   $request->input('book_publisher');
         $book_price =       $request->input('book_price');
-        $user_id =          session('user_id');
+        $request_penerima =     $request->input('request_penerima');
+        $request_alamat =       $request->input('request_alamat');
+        $request_phone =        $request->input('request_phone');
         DB::table('request')
             ->insert(
                 array(
@@ -47,6 +63,9 @@ class RequestController extends Controller
                     'request_book_year' => $book_year,
                     'request_book_publisher' => $book_publisher,
                     'request_price' => $book_price,
+                    'request_penerima' => $request_penerima,
+                    'request_alamat' => $request_alamat,
+                    'request_phone' => $request_phone,
                 ));
         return redirect()->route('listrequest');
     }

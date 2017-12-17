@@ -46,4 +46,18 @@ class AuthController extends Controller
                 ));
         return redirect()->route('login');
     }
+
+    function profile(){
+        $profile = DB::table('user')
+            ->where('user_id', session('user_id'))
+            ->get();
+        return view('auth.profile', compact('profile'));
+    }
+
+    function add_saldo(Request $request){
+        DB::table('user')
+            ->where('user_id', session('user_id'))
+            ->update(['user_saldo' => $request->current_saldo + $request->add_saldo]);
+        return redirect()->route('profile');
+    }
 }
