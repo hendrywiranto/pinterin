@@ -13,15 +13,24 @@ class SellController extends Controller
             ->join('user', 'user.user_id', '=', 'selling.user_id')
             ->where('selling_sold', 0)
             ->get();
-        //$sellings = DB::table('selling')->where('selling_sold', 0)->get();
         return view('sell.listselling',compact('sellings'));
     }
 
     function display_buy_form(Request $request)
     {
-        $selling_id =       $request->input('selling_id');
-        $selling_price =    $request->input('selling_price');
-        return view('sell.detail', compact('selling_id','selling_price'));
+        $selling_id =                   $request->input('selling_id');
+        $user_name =                    $request->input('user_name');
+        $selling_book_name =            $request->input('selling_book_name');
+        $selling_book_author =          $request->input('selling_book_author');
+        $selling_book_year =            $request->input('selling_book_year');
+        $selling_book_publisher =       $request->input('selling_book_publisher');
+        $selling_date =                 $request->input('selling_date');
+        $selling_price =                $request->input('selling_price');
+        $saldo = DB::table('user')
+                ->where('user_id', session('user_id'))
+                ->select('user_saldo')
+                ->get();
+        return view('sell.detail', compact('selling_id','selling_book_name','selling_book_author','selling_book_year','selling_book_publisher','selling_date','user_name','selling_price','saldo'));
     }
 
     function buy_buku(Request $request)

@@ -72,6 +72,12 @@
 		<form role="form" method="GET" action='sell/detail'>
 	       	{!! csrf_field() !!}
 	       	<input type="hidden" name="selling_id" value="{{$selling->selling_id}}">
+	       	<input type="hidden" name="user_name" value="{{$selling->user_name}}">
+	       	<input type="hidden" name="selling_book_name" value="{{$selling->selling_book_name}}">
+	       	<input type="hidden" name="selling_book_author" value="{{$selling->selling_book_author}}">
+	       	<input type="hidden" name="selling_book_year" value="{{$selling->selling_book_year}}">
+	       	<input type="hidden" name="selling_book_publisher" value="{{$selling->selling_book_publisher}}">
+	       	<input type="hidden" name="selling_date" value="{{$selling->selling_date}}">
 	       	<input type="hidden" name="selling_price" value="{{$selling->selling_price}}">
 	       	<input class="btn btn-outline-danger" type="submit" name="submit" value="Buy">
 		</form>
