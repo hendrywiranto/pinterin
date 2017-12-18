@@ -1,13 +1,13 @@
 @extends('layouts.index')
 @section('content')
-	<h1>List Buku</h1>
+	<h1>Book List</h1>
 	<?php $i=0; ?>
 	@foreach($books as $book)
 	<br> <h2> <?php $i++; ?> {{$i}} </h2>
 	<div class="container fill">
 		<div class="row align-items-start">
 			<div class="col-4">
-				<label><b>Nama Buku</b></label>
+				<label><b>Book Name</b></label>
 			</div>
 			<div class="col-6">
 				{{$book->shop_sell_book_name}}
@@ -15,7 +15,7 @@
 		</div>
 		<div class="row align-items-start">
 			<div class="col-4">
-				<label><b>Penulis Buku</b></label>
+				<label><b>Book author</b></label>
 			</div>
 			<div class="col-6">
 				{{$book->shop_sell_book_author}}
@@ -23,7 +23,7 @@
 		</div>
 		<div class="row align-items-start">
 			<div class="col-4">
-				<label><b>Tahun Buku</b></label>
+				<label><b>Book year</b></label>
 			</div>
 			<div class="col-6">
 				{{$book->shop_sell_book_year}}
@@ -31,7 +31,7 @@
 		</div>
 		<div class="row align-items-start">
 			<div class="col-4">
-				<label><b>Penerbit Buku</b></label>
+				<label><b>Book publisher</b></label>
 			</div>
 			<div class="col-6">
 				{{$book->shop_sell_book_publisher}}
@@ -39,7 +39,7 @@
 		</div>
 		<div class="row align-items-start">
 			<div class="col-4">
-				<label><b>Tanggal list buku</b></label>
+				<label><b>Book listing date</b></label>
 			</div>
 			<div class="col-6">
 				{{$book->shop_sell_date}}
@@ -47,7 +47,7 @@
 		</div>
 		<div class="row align-items-start">
 			<div class="col-4">
-				<label><b>Harga Buku</b></label>
+				<label><b>Book price</b></label>
 			</div>
 			<div class="col-6">
 				Rp {{$book->shop_sell_price}}

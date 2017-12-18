@@ -10,6 +10,11 @@
 		</div>
 	</div>
 	<?php $i=0; ?>
+ 	<form>
+		<label>Search Title</label>
+ 		<input type="text" name="title">
+ 		<input type="submit" name="search" value="Search" class="btn btn-secondary">
+ 	</form>
 	@foreach($requests as $request)
 	<br> <h2><?php $i++; ?> {{$i}} </h2>
 	<div class="container fill">

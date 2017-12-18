@@ -30,7 +30,9 @@ class RequestController extends Controller
         DB::table('request')
             ->where('request_id', $request->book_id)
             ->update(['request_sold' => 1]);
-        return redirect()->route('listrequest');
+        $notice = "Sell based on request success";
+        $route = "/request";
+        return view('layouts.notice',compact('route','notice'));
     }
 
     function add_request()

@@ -8,10 +8,10 @@
                   <a class="nav-link" href="{{'/admin'}}">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{'/admin/add'}}">Tambah Buku</a>
+                  <a class="nav-link" href="{{'/admin/add'}}">Add Book</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{'/admin/listbuku'}}">List Buku</a>
+                  <a class="nav-link" href="{{'/admin/listbuku'}}">Book List</a>
                 </li>
               </ul>
           </div>

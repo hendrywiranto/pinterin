@@ -73,7 +73,7 @@ class SellController extends Controller
                 ->where('selling_id', $request->selling_id)
                 ->update(['selling_sold' => 1]);
 
-            $notice = "Transaction success";
+            $notice = "Buy success";
             $route = "/sell";
             return view('layouts.notice',compact('route','notice'));
         }
@@ -108,6 +108,8 @@ class SellController extends Controller
                     'selling_price' => $book_price,
                     'selling_book_details' => $book_details
                 ));
-        return redirect()->route('listselling');
+        $notice = "Add selling success";
+        $route = "/sell";
+        return view('layouts.notice',compact('route','notice'));
     }
 }
