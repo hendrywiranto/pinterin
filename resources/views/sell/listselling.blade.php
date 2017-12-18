@@ -73,7 +73,7 @@
 	       	{!! csrf_field() !!}
 	       	<input type="hidden" name="selling_id" value="{{$selling->selling_id}}">
 	       	<input type="hidden" name="selling_price" value="{{$selling->selling_price}}">
-	       	<input class="btn btn-outline-danger" type="submit" name="submit" value="Buy">
+	       	<input class="btn btn-outline-danger" type="submit" name="submit" value="Sell">
 		</form>
 	</div>
 	@endforeach

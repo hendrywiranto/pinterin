@@ -3,7 +3,10 @@
 	<form class="comment-form" role="form" method="POST" action='login'>
        	{!! csrf_field() !!}
        	<div class="row align-items-center">
-       		<div class="col"></div>
+       		<div class="col-4">
+       			<h1>pinter.in</h1>
+       			<h6>ya nda apa-apa... keren aja kan ya? </h6>
+       		</div>
 	  		<div class="form-group col-6">
 	    		<label for=""><b>Username</b></label>
 				<input class="form-control" type="text" name="username">

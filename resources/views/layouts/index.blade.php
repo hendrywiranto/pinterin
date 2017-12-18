@@ -13,7 +13,7 @@
 			<div class="card-footer text-muted">
 			{{--    @include('layouts.header')--}}
 			    @yield('content')
-	            <br><p align="center">Copyright &copy;2017 Pinterin Inc.</p>
+	            <br><br><p align="center"><i>Copyright &copy;2017 Pinterin®. By using this site, you agree to the Terms of Use and Privacy Policy.</i></p>
 			</div>
 		</div>
 	</body>

@@ -36,8 +36,8 @@
 					<input class="form-control" type="text" name="request_phone">
 
 					<br>
-					<input class="btn btn-success" type="submit" name="submit" value="Set Request">
-					<a class="btn btn-outline-success" href="/request">Back</a>
+					<input class="btn btn-outline-success btn-lg" type="submit" name="submit" value="Set Request">
+					<a class="btn btn-success" href="/request">Back</a>
 				</div>
 			</div>
 		</div>

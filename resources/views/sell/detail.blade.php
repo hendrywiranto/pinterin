@@ -4,10 +4,10 @@
        	{{ csrf_field() }}
 		<div class="form-group">
 			<div class="row align-items-center">
-	  			<div class="col">
+	  			<div class="col-4" align="center">
 	  				<h2>Add Sell</h2>
 	  			</div>
-		    	<div class="col-10">
+		    	<div class="col-8">
 		    		<label for="">Nama Penerima</label>
 					<input class="form-control" type="text" name="trans_penerima">
 
@@ -18,9 +18,9 @@
 					<input class="form-control" type="text" name="trans_phone">
 
 	       			<input type="hidden" name="selling_id" value="{{$selling_id}}">
-	       			<input type="hidden" name="selling_price" value="{{$selling_price}}">
-					<input class="btn btn-danger" type="submit" name="submit" value="Buy">
-					<a class="btn btn-outline-danger" href="/sell">Back</a>
+	       			<input type="hidden" name="selling_price" value="{{$selling_price}}"><br>
+					<input class="btn btn-outline-danger btn-lg" type="submit" name="submit" value="Buy">
+					<a class="btn btn-danger" href="/sell">Back</a>
 				</div>
 			</div>
 		</div>

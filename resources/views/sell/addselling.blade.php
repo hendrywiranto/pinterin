@@ -30,8 +30,8 @@
 					<input class="form-control" type="text" name="book_details">
 					
 					<br>
-					<input class="btn btn-danger" type="submit" name="submit" value="Add Sell">
-					<a class="btn btn-outline-danger" href="/sell">Back</a>
+					<input class="btn btn-outline-danger btn-lg" type="submit" name="submit" value="Add Sell">
+					<a class="btn btn-danger" href="/sell">Back</a>
 				</div>
 			</div>
 		</div>
