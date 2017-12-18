@@ -84,13 +84,13 @@
 	  			</div>
 		    	<div class="col-8">
 		    		<label for="">Recipient name</label>
-					<input class="form-control" type="text" name="trans_penerima">
+					<input class="form-control" type="text" name="trans_penerima" required>
 
 		    		<label for="">Recipient address</label>
-					<input class="form-control" type="text" name="trans_alamat">
+					<input class="form-control" type="text" name="trans_alamat" required>
 
 		    		<label for="">Recipient Phone</label>
-					<input class="form-control" type="text" name="trans_phone">
+					<input class="form-control" type="text" name="trans_phone" required>
 
 	       			<input type="hidden" name="selling_id" value="{{$selling_id}}">
 	       			<input type="hidden" name="selling_price" value="{{$selling_price}}"><br>

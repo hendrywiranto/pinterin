@@ -7,21 +7,21 @@
 		<div class="row">
 			<div class="col-6">
 	    		<label for="">Book name</label>
-				<input class="form-control" type="text" name="book_name">
+				<input class="form-control" type="text" name="book_name" required>
 			</div>
 			<div class="col-6">
 	    		<label for="">Book author</label>
-				<input class="form-control" type="text" name="book_author">
+				<input class="form-control" type="text" name="book_author" required>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-6">
 	    		<label for="">Book year</label>
-				<input class="form-control" type="number" min="1900" max="2018" step="1" name="book_year">
+				<input class="form-control" type="number" min="1900" max="2018" step="1" name="book_year" required>
 			</div>
 			<div class="col-6">
 	    		<label for="">Book publisher</label>
-				<input class="form-control" type="text" name="book_publisher">
+				<input class="form-control" type="text" name="book_publisher" required>
 			</div>
 		</div>
 		<div class="row">
@@ -29,7 +29,7 @@
 	    		<label for="">Book price</label>
 	    		<div class="input-group">
 		    		<div class="input-group-addon">Rp</div>
-					<input class="form-control currency" type="number" min="0" max="1000000" step="100" name="book_price">
+					<input class="form-control currency" type="number" min="0" max="1000000" step="100" name="book_price" required>
 				</div></div>
 		</div><br>
 			<input class="btn btn-primary" type="submit" name="submit" value="Add Book">

@@ -9,31 +9,31 @@
 	  			</div>
 		    	<div class="col-10">
 		    		<label for="">Nama Buku</label>
-					<input class="form-control" type="text" name="book_name">
+					<input class="form-control" type="text" name="book_name" required>
 
 		    		<label for="">Penulis Buku</label>
-					<input class="form-control" type="text" name="book_author">
+					<input class="form-control" type="text" name="book_author" required>
 
 		    		<label for="">Tahun Buku</label>
-					<input class="form-control" type="number" value="1900" min="1900" max="2018" step="1" name="book_year">
+					<input class="form-control" type="number" value="1900" min="1900" max="2018" step="1" name="book_year" required>
 
 		    		<label for="">Penerbit Buku</label>
-					<input class="form-control" type="text" name="book_publisher">
+					<input class="form-control" type="text" name="book_publisher" required>
 
 					<label for="">Harga Buku</label>
 					<div class="input-group">
 			    		<div class="input-group-addon">Rp</div>
-							<input class="form-control" type="number" min="0" max="1000000" step="100" name="book_price">
+							<input class="form-control" type="number" min="0" max="1000000" step="100" name="book_price" required>
 					</div>
 
 		    		<label for="">Penerima Buku</label>
-					<input class="form-control" type="text" name="request_penerima">
+					<input class="form-control" type="text" name="request_penerima" required>
 
 		    		<label for="">Alamat Penerima Buku</label>
-					<input class="form-control" type="text" name="request_alamat">
+					<input class="form-control" type="text" name="request_alamat" required>
 
 		    		<label for="">Telepon Penerima Buku</label>
-					<input class="form-control" type="text" name="request_phone">
+					<input class="form-control" type="text" name="request_phone" required>
 
 					<br>
 					<input class="btn btn-outline-success btn-lg" type="submit" name="submit" value="Set Request">

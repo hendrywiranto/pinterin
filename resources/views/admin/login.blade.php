@@ -6,10 +6,10 @@
        		<div class="col"></div>
 		  		<div class="form-group col-6">
 		    		<label for="">Username <b>Admin ONLY!</b></label>
-					<input class="form-control" type="text" name="username">
+					<input class="form-control" type="text" name="username" required>
 					
 		    		<label for="">Password </label>
-					<input class="form-control" type="password" name="password"><br>
+					<input class="form-control" type="password" name="password" required><br>
 					<input class="btn btn-primary" type="submit" name="submit">
 					<a class="btn btn-success btn-lg" href="/">Back to User Page</a>
 				</div>

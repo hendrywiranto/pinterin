@@ -8,10 +8,10 @@
        		</div>
 	  		<div class="form-group col-6">
 	    		<label for=""><b>Username</b></label>
-				<input class="form-control" type="text" name="username">
+				<input class="form-control" type="text" name="username" required>
 				
 	    		<label for=""><b>Password</b></label>
-				<input class="form-control" type="password" name="password">
+				<input class="form-control" type="password" name="password" required>
 			</div>
 			<div class="col-2">
 				<input class="btn btn-outline-info btn-lg" type="submit" name="submit" value="Login">

@@ -10,20 +10,20 @@
 	  				</div>
 		    		<div class="col-10">
 				    	<label for="">Username</label>
-						<input class="form-control" type="text" name="username">
+						<input class="form-control" type="text" name="username" required>
 		
 			    		<label for="">Password</label>
-						<input class="form-control" type="password" name="password">
+						<input class="form-control" type="password" name="password" required>
 				    	
 				    	<label for="">Fullname</label>
-						<input class="form-control" type="text" name="fullname">
+						<input class="form-control" type="text" name="fullname" required>
 
 			    		<label for="">Address</label>
-						<input class="form-control" type="text" name="address">
+						<input class="form-control" type="text" name="address" required>
 
 			    		<label for="">Phone</label>
-						<input class="form-control" type="text" name="phone"><br>
-						<input type="submit" name="submit" class="btn btn-outline-primary">
+						<input class="form-control" type="text" name="phone" required><br>
+						<input type="submit" name="Register" value="Register" class="btn btn-outline-primary">
 						<a href="/" class="btn btn-outline-info">Back</a>
 					</div>
 				</div>
