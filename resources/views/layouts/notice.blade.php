@@ -5,7 +5,7 @@
 			<h2> {{$notice}} </h2>
 		</div>
 		<div class="col">
-			<a class="btn btn-success btn-lg" href="/sell">Back</a>
+			<a class="btn btn-success btn-lg" href="{{$route}}">Back</a>
 		</div>
 	</div>
 @stop

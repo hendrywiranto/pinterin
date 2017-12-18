@@ -49,8 +49,9 @@ class SellController extends Controller
         $saldo =            $current_saldo[0]->user_saldo - $price;
 
         if ($saldo<0){
-            $notice = "Saldo tidak mencukupi";
-            return view('layouts.notice',compact('notice'));
+            $notice = "Your balance is not enough";
+            $route = "/sell";
+            return view('layouts.notice',compact('route','notice'));
         }
         else {
             DB::table('user')
@@ -72,8 +73,9 @@ class SellController extends Controller
                 ->where('selling_id', $request->selling_id)
                 ->update(['selling_sold' => 1]);
 
-            $notice = "Transaksi berhasil";
-            return view('layouts.notice',compact('notice'));
+            $notice = "Transaction success";
+            $route = "/sell";
+            return view('layouts.notice',compact('route','notice'));
         }
     }
 

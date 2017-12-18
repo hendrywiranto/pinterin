@@ -15,7 +15,7 @@
 	<div class="container fill">
 		<div class="row">
 			<div class="col-md-4">
-				<label>Penjual Buku</label>
+				<label><b>Book owner</b></label>
 			</div>
 			<div class="col-md-6">
 				{{$selling->user_name}}
@@ -23,7 +23,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<label>Nama Buku</label>
+				<label><b>Book Name</b></label>
 			</div>
 			<div class="col-md-6">
 				{{$selling->selling_book_name}}
@@ -31,7 +31,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<label>Penulis Buku</label>
+				<label><b>Book author</b></label>
 			</div>
 			<div class="col-md-6">
 				{{$selling->selling_book_author}}
@@ -39,7 +39,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<label>Tahun Buku</label>
+				<label><b>Book year</b></label>
 			</div>
 			<div class="col-md-6">
 				{{$selling->selling_book_year}}
@@ -47,7 +47,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<label>Penerbit Buku</label>
+				<label><b>Book publisher</b></label>
 			</div>
 			<div class="col-md-6">
 				{{$selling->selling_book_publisher}}
@@ -55,7 +55,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<label>Tanggal list buku</label>
+				<label><b>Book listing date</b></label>
 			</div>
 			<div class="col-md-6">
 				{{$selling->selling_date}}
@@ -63,7 +63,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<label>Harga Buku</label>
+				<label><b>Book price</b></label>
 			</div>
 			<div class="col-md-6">
 				Rp {{$selling->selling_price}}

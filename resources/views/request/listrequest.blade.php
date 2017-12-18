@@ -15,13 +15,13 @@
 	<div class="container fill">
 		<div class="row">
 			<div class="col-md-2">
-				<label><b>Peminat Buku</b></label>
+				<label><b>Request owner</b></label>
 			</div>
 			<div class="col-md-4">
 				{{$request->user_full_name}}
 			</div>
 			<div class="col-md-2">
-				<label><b>Penerima</b></label>
+				<label><b>Recipient name</b></label>
 			</div>
 			<div class="col-md-4">
 				{{$request->request_penerima}}
@@ -29,13 +29,13 @@
 		</div>
 		<div class="row">
 			<div class="col-md-2">
-				<label><b>Nama Buku</b></label>
+				<label><b>Book name</b></label>
 			</div>
 			<div class="col-md-4">
 				{{$request->request_book_name}}
 			</div>
 			<div class="col-md-2">
-				<label><b>Alamat Penerima</b></label>
+				<label><b>Recipient address</b></label>
 			</div>
 			<div class="col-md-4">
 				{{$request->request_alamat}}
@@ -43,13 +43,13 @@
 		</div>
 		<div class="row">
 			<div class="col-md-2">
-				<label><b>Penulis Buku</b></label>
+				<label><b>Book author</b></label>
 			</div>
 			<div class="col-md-4">
 				{{$request->request_book_author}}
 			</div>
 			<div class="col-md-2">
-				<label><b>Telepom Penerima</b></label>
+				<label><b>Recipient Phone</b></label>
 			</div>
 			<div class="col-md-4">
 				{{$request->request_phone}}
@@ -57,7 +57,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-2">
-				<label><b>Tahun Buku</b></label>
+				<label><b>Book year</b></label>
 			</div>
 			<div class="col-md-4">
 				{{$request->request_book_year}}
@@ -65,7 +65,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-2">
-				<label><b>Penerbit Buku</b></label>
+				<label><b>Book publisher</b></label>
 			</div>
 			<div class="col-md-4">
 				{{$request->request_book_publisher}}
@@ -73,7 +73,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-2">
-				<label><b>Harga Buku</b></label>
+				<label><b>Book price</b></label>
 			</div>
 			<div class="col-md-4">
 				Rp {{$request->request_price}}

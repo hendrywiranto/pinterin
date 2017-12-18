@@ -7,7 +7,7 @@
 		    	<div class="col-8">
 		    		<div class="row">
 						<div class="col-md-4">
-									<label>Penjual Buku</label>
+									<label><b>Book owner</b></label>
 								</div>
 								<div class="col-md-4">
 									{{$user_name}}
@@ -15,7 +15,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-4">
-									<label>Nama Buku</label>
+									<label><b>Book Name</b></label>
 								</div>
 								<div class="col-md-4">
 									{{$selling_book_name}}
@@ -23,7 +23,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-4">
-									<label>Penulis Buku</label>
+									<label><b>Book author</b></label>
 								</div>
 								<div class="col-md-4">
 									{{$selling_book_author}}
@@ -31,7 +31,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-4">
-									<label>Tahun Buku</label>
+									<label><b>Book year</b></label>
 								</div>
 								<div class="col-md-4">
 									{{$selling_book_year}}
@@ -39,7 +39,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-4">
-									<label>Penerbit Buku</label>
+									<label><b>Book publisher</b></label>
 								</div>
 								<div class="col-md-4">
 									{{$selling_book_publisher}}
@@ -47,7 +47,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-4">
-									<label>Tanggal list buku</label>
+									<label><b>Book listing date</b></label>
 								</div>
 								<div class="col-md-4">
 									{{$selling_date}}
@@ -55,7 +55,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-4">
-									<label>Harga Buku</label>
+									<label><b>Book price</b></label>
 								</div>
 								<div class="col-md-4">
 									Rp {{$selling_price}}
@@ -63,13 +63,13 @@
 							</div>
 							<div class="row">
 								<div class="col-md-4">
-									<label>Saldo Sekarang</label>
+									<label><b>Current balance</b></label>
 								</div>
 								<div class="col-md-3">
 									Rp {{$saldo[0]->user_saldo}}  
 								</div>
 								<div class="col-md-2">
-									<a href="{{'/profile'}}" class="btn btn-secondary">Top up saldo</a>
+									<a href="{{'/profile'}}" class="btn btn-secondary" target="_BLANK">Balance Top Up</a>
 								</div>
 							</div>
 						</div>
@@ -80,16 +80,16 @@
 		<div class="form-group">
 			<div class="row align-items-center">
 	  			<div class="col-4" align="center">
-	  				<h2>Buy Confirmation</h2>
+	  				<h2>Shipment Data</h2>
 	  			</div>
 		    	<div class="col-8">
-		    		<label for="">Nama Penerima</label>
+		    		<label for="">Recipient name</label>
 					<input class="form-control" type="text" name="trans_penerima">
 
-		    		<label for="">Alamat Penerima</label>
+		    		<label for="">Recipient address</label>
 					<input class="form-control" type="text" name="trans_alamat">
 
-		    		<label for="">Nomor Telepon Penerima</label>
+		    		<label for="">Recipient Phone</label>
 					<input class="form-control" type="text" name="trans_phone">
 
 	       			<input type="hidden" name="selling_id" value="{{$selling_id}}">

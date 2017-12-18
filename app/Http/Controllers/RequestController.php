@@ -9,7 +9,6 @@ class RequestController extends Controller
 {
     function index()
     {
-        //$requests = DB::table('request')->where('request_sold', 0)->get();
         $requests = DB::table('request')
             ->join('user', 'user.user_id', '=', 'request.user_id')
             ->where('request_sold', 0)
@@ -52,21 +51,37 @@ class RequestController extends Controller
         $request_penerima =     $request->input('request_penerima');
         $request_alamat =       $request->input('request_alamat');
         $request_phone =        $request->input('request_phone');
-        DB::table('request')
-            ->insert(
-                array(
-                    'user_id' => $user_id,
-                    'request_date' => $book_date,
-                    'request_sold' => $book_sold,
-                    'request_book_name' => $book_name,
-                    'request_book_author' => $book_author,
-                    'request_book_year' => $book_year,
-                    'request_book_publisher' => $book_publisher,
-                    'request_price' => $book_price,
-                    'request_penerima' => $request_penerima,
-                    'request_alamat' => $request_alamat,
-                    'request_phone' => $request_phone,
-                ));
-        return redirect()->route('listrequest');
+
+        $current_saldo =        DB::table('user')->where('user_id', session('user_id'))->get();
+        $saldo = $current_saldo[0]->user_saldo - (int)$book_price;
+        if ($saldo<0){
+            $notice = "Your balance is not enough";
+            $route = "/request";
+            return view('layouts.notice',compact('route','notice'));
+        }
+        else {        
+            DB::table('user')
+                ->where('user_id', session('user_id'))
+                ->update(['user_saldo' => $saldo]);
+            
+            DB::table('request')
+                ->insert(
+                    array(
+                        'user_id' => $user_id,
+                        'request_date' => $book_date,
+                        'request_sold' => $book_sold,
+                        'request_book_name' => $book_name,
+                        'request_book_author' => $book_author,
+                        'request_book_year' => $book_year,
+                        'request_book_publisher' => $book_publisher,
+                        'request_price' => $book_price,
+                        'request_penerima' => $request_penerima,
+                        'request_alamat' => $request_alamat,
+                        'request_phone' => $request_phone,
+                    ));
+            $notice = "Add book request success";
+            $route = "/request";
+            return view('layouts.notice',compact('route','notice'));
+        }
     }
 }
