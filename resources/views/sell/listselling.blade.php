@@ -3,7 +3,7 @@
 	<div class="container"><br>
 	<div class="row align-items-center">
 		<div class="col">
-			<h1>Sell Book</h1>
+			<h1>Selling Book List</h1>
 		</div>
 		<div class="col-3">
 			<a class="btn btn-danger btn-lg my-2 my-sm-0" href="{{'/sell/add'}}">Add Sell</a>
@@ -73,7 +73,7 @@
 	       	{!! csrf_field() !!}
 	       	<input type="hidden" name="selling_id" value="{{$selling->selling_id}}">
 	       	<input type="hidden" name="selling_price" value="{{$selling->selling_price}}">
-	       	<input class="btn btn-outline-danger" type="submit" name="submit" value="Sell">
+	       	<input class="btn btn-outline-danger" type="submit" name="submit" value="Buy">
 		</form>
 	</div>
 	@endforeach

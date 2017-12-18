@@ -1,7 +1,11 @@
 @extends('layouts.index')
 @section('content')
-	<div>
-		{{$notice}}
+	<div class="row align-items-center" align="center">
+		<div class="col">
+			<h2> {{$notice}} </h2>
+		</div>
+		<div class="col">
+			<a class="btn btn-success btn-lg" href="/sell">Back</a>
+		</div>
 	</div>
-	<a href="/sell">Back</a>
 @stop

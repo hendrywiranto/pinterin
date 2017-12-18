@@ -11,6 +11,7 @@
 		    		<label for="">Password </label>
 					<input class="form-control" type="password" name="password"><br>
 					<input class="btn btn-primary" type="submit" name="submit">
+					<a class="btn btn-success btn-lg" href="/">Back to User Page</a>
 				</div>
 			<div class="col"></div>
 		</div>

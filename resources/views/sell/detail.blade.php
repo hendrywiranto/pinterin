@@ -5,7 +5,7 @@
 		<div class="form-group">
 			<div class="row align-items-center">
 	  			<div class="col-4" align="center">
-	  				<h2>Add Sell</h2>
+	  				<h2>Buy Confirmation</h2>
 	  			</div>
 		    	<div class="col-8">
 		    		<label for="">Nama Penerima</label>
