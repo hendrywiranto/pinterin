@@ -1,12 +1,12 @@
 @extends('layouts.index')
 @section('content')
 	<div class="container"><br>
-	<div class="row">
+	<div class="row align-items-center">
 		<div class="col">
 			<h1>Request Book</h1>
 		</div>
 		<div class="col-3">
-			<a class="btn btn-success my-2 my-sm-0" href="{{'/request/add'}}">Add Request</a>
+			<a class="btn btn-success btn-lg my-2 my-sm-0" href="{{'/request/add'}}">Add Request</a>
 		</div>
 	</div>
 	<?php $i=0; ?>

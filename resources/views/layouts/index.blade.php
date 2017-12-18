@@ -13,7 +13,7 @@
 			<div class="card-footer text-muted">
 			{{--    @include('layouts.header')--}}
 			    @yield('content')
-	            <p align="center">Copyright &copy;2017 Pinterin Inc.</p>
+	            <br><p align="center">Copyright &copy;2017 Pinterin Inc.</p>
 			</div>
 		</div>
 	</body>

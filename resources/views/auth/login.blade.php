@@ -2,15 +2,17 @@
 @section('content')
 	<form class="comment-form" role="form" method="POST" action='login'>
        	{!! csrf_field() !!}
-       	<div class="row">
+       	<div class="row align-items-center">
        		<div class="col"></div>
 	  		<div class="form-group col-6">
-	    		<label for="">Username</label>
+	    		<label for=""><b>Username</b></label>
 				<input class="form-control" type="text" name="username">
 				
-	    		<label for="">Password</label>
-				<input class="form-control" type="password" name="password"><br>	
-				<input class="btn btn-outline-success" type="submit" name="submit">
+	    		<label for=""><b>Password</b></label>
+				<input class="form-control" type="password" name="password">
+			</div>
+			<div class="col-2">
+				<input class="btn btn-outline-info btn-lg" type="submit" name="submit" value="Login">
 			</div>
 			<div class="col"></div>
 		</div>

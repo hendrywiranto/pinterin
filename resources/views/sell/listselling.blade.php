@@ -1,12 +1,12 @@
 @extends('layouts.index')
 @section('content')
 	<div class="container"><br>
-	<div class="row">
+	<div class="row align-items-center">
 		<div class="col">
 			<h1>Sell Book</h1>
 		</div>
 		<div class="col-3">
-			<a class="btn btn-danger my-2 my-sm-0" href="{{'/sell/add'}}">Add Sell</a>
+			<a class="btn btn-danger btn-lg my-2 my-sm-0" href="{{'/sell/add'}}">Add Sell</a>
 		</div>
 	</div>
  	<?php $i=0; ?>

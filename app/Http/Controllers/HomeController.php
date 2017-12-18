@@ -8,6 +8,6 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     function index(){
-    	return view('layouts.index');
+    	return view('layouts.userhome');
     }
 }

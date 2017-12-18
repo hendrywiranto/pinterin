@@ -1,6 +1,6 @@
 @extends('layouts.index')
 @section('content')
-	<div><h2>Tambah Buku</h2></div>
+	<div><h1>Tambah Buku</h1></div>
 	<form role="form" method="POST" action=''>
        	{{ csrf_field() }}
 		<div class="form-group">
@@ -32,7 +32,7 @@
 					<input class="form-control currency" type="number" min="0" max="1000000" step="100" name="book_price">
 				</div></div>
 		</div><br>
-			<input class="btn btn-primary" type="submit" name="submit">
+			<input class="btn btn-primary" type="submit" name="submit" value="Tambah Buku">
 		</div>
 	</form>
 @stop
